@@ -1,0 +1,77 @@
+{
+	"common": {
+		"name": "porik-smart-plug",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "Porik Smart Plug",
+		"titleLang": {
+			"en": "Porik Smart Plug",
+			"de": "Porik Smart Plug",
+			"ru": "Умная розетка Порик",
+			"pt": "Plugue Inteligente Porik",
+			"nl": "Porik slimme stekker",
+			"fr": "Prise intelligente Porik",
+			"it": "Spina intelligente Porik",
+			"es": "Enchufe inteligente Porik",
+			"pl": "Inteligentna wtyczka Porik",
+			"zh-cn": "Porik 智能插头"
+		},
+		"desc": {
+			"en": "porik-smart-plug",
+			"de": "Porik-Smart-Plug",
+			"ru": "порик-умная-плагин",
+			"pt": "porik-smart-plug",
+			"nl": "porik-slimme-stekker",
+			"fr": "porik-prise-intelligente",
+			"it": "porik-smart-plug",
+			"es": "enchufe-inteligente-porik",
+			"pl": "porik-inteligentna-wtyczka",
+			"zh-cn": "porik-智能插头"
+		},
+		"authors": [
+			"Daniel Grabasch <daniel55555@freenet.de>"
+		],
+		"keywords": [
+			"porik plug"
+		],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "main.js",
+		"icon": "porik-smart-plug.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/gabbarowski/ioBroker.porik-smart-plug/main/admin/porik-smart-plug.png",
+		"readme": "https://github.com/gabbarowski/ioBroker.porik-smart-plug/blob/main/README.md",
+		"loglevel": "info",
+		"mode": "daemon",
+		"type": "iot-systems",
+		"compact": true,
+		"connectionType": "local",
+		"dataSource": "poll",
+		"materialize": true,
+		"eraseOnUpload": true,
+		"dependencies": [
+			{
+				"js-controller": ">=2.0.0"
+			}
+		]
+	},
+	"native": {
+		"option1": true,
+		"option2": "42"
+	},
+	"objects": [],
+	"instanceObjects": []
+}
