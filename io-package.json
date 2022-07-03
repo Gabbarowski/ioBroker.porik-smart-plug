@@ -77,9 +77,22 @@
         ]
     },
     "native": {
-        "option1": true,
-        "option2": "42"
+        "observeObject": ""
     },
     "objects": [],
-    "instanceObjects": []
+    "instanceObjects": [
+		{
+			"_id": "apiInfo.name",
+			"type": "state",
+			"role": "text",
+			"common": {
+				"name": "Device name",
+				"type": "string",
+				"read": true,
+				"write": false,
+				"def": false
+			},
+			"native": {}
+		}
+	]
 }

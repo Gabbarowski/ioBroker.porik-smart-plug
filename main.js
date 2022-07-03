@@ -1,5 +1,6 @@
 "use strict";
 
+const { adapter } = require("@iobroker/adapter-core");
 /*
  * Created with @iobroker/create-adapter v2.1.1
  */
@@ -27,13 +28,50 @@ class PorikSmartPlug extends utils.Adapter {
 		// this.on("objectChange", this.onObjectChange.bind(this));
 		// this.on("message", this.onMessage.bind(this));
 		this.on("unload", this.onUnload.bind(this));
+
+
 	}
 
 	/**
 	 * Is called when databases are connected and adapter received configuration.
 	 */
 	async onReady() {
+/* 		let callbackTest
+		let test;
+		//this.log.debug(test);
+
+		this.setObjectNotExists('observeValue', {
+			type: "state",
+			common: {
+				name: "power",
+				type: "string",
+				role: "value",
+				write: false,
+				read: true,
+				def: false
+			},
+			native: {} 
+		})
 		
+		this.on("ready", () => {
+			this.setTimeout(this.runBasic, 2000);
+		})
+ */
+
+		this.getForeignStateAsync("0_userdata.0.dasdasd", function (err, obj) {
+			console.log(obj)
+		})
+
+		this.subscribeStates('*');
+/* 		this.getStateAsync("0_userdata.0.dasdasd",function (err, obj) {
+			console.log(err);
+		}) */
+	}
+
+	runBasic() {
+		this.getState("0_userdata.0.dasdasd", function (err, obj) {
+			console.log(obj);
+		})
 	}
 
 	/**
@@ -77,6 +115,7 @@ class PorikSmartPlug extends utils.Adapter {
 	 * @param {ioBroker.State | null | undefined} state
 	 */
 	onStateChange(id, state) {
+
 		if (state) {
 			// The state was changed
 			this.log.info(`state ${id} changed: ${state.val} (ack = ${state.ack})`);

@@ -23,6 +23,15 @@
                     "label": "Port",
                     "help": "Port of your Plug"
                 },
+                "observeObject": {
+                    "newLine": true,
+                    "type": "text",
+                    "sm": 12,
+                    "md": 6,
+                    "lg": 6,
+                    "label": "Observing Object",
+                    "help": "Please enter your object who sends the Power. (Watt)"
+                    },
                 "_ioBrokerKursBanner": {
                     "newLine": true,
                     "type": "staticImage",
